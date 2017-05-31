@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main()
+{
+	char slovo=0;
+	int broj1=0, broj2=0, temp, cifra1 = 0, cifra2 = 0;
+	printf("\nZadati slovo i dva cela broja: ");
+	scanf("\n%c%d%d", slovo, broj1, broj2);
+	printf("\nUcitano slovo: %c,njegov asci broj: %d", slovo, slovo);
+	printf("Ucitani brojevi: %d %d", broj1, broj2);
+
+	temp = broj1;
+	while (temp)
+	{
+		cifra1++;
+		temp = temp / 10;
+	}
+	temp = broj2;
+	while (temp)
+	{
+		cifra2++;
+		temp = temp / 10;
+	}
+	if (cifra1 == cifra2) printf("\nBroj decimalnih cifara je isti.");
+	else printf("\nVeci broj decimalnih cifara ima %d broj", (cifra1 > cifra2) ? 1 : 2);
+
+	return 0;
+}
